@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Retail Horror Stories: Black Friday Edition</title>
+  </head>
+  <body>
+    <div class="game">
+      <audio
+        id="background-music"
+        src="music/Deduction.mp3"
+        autoplay
+        loop
+      ></audio>
+      <div class="game-text">
+        <h2 id="story-text">
+          You recently started a new retail job at Walmart! You find out that
+          you've been scheduled to work on Black Friday... Not only is it your
+          first Black Friday at Walmart, it's also your first time working on
+          Black Friday ever! Do you think you'll survive the day, or do you
+          chicken out?
+        </h2>
+      </div>
+      <div class="game-options" id="game-options">
+        <button class="game-btn" onclick="chooseOption('noWork')">
+          Call out sick. I'm not doing that to myself.
+        </button>
+        <button class="game-btn" onclick="chooseOption('noWork')">
+          Tell my manager I'm traveling for Thanksgiving, so I won't be able to
+          work on Friday.
+        </button>
+        <button class="game-btn" onclick="chooseOption('workYes')">
+          Decide to work on Black Friday. What's the worst that can happen?
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
