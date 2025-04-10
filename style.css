@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 body {
   margin: 0 autox;
   padding: 0 auto;
@@ -5,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 72vh;
-  font-family: "Comfortaa", cursive;
+  font-family: "Outfit", sans-serif;
   color: white;
   background-color: black;
 }
@@ -15,10 +17,32 @@ audio {
   height: 0;
 }
 
+a {
+  transition: all 0.2s ease-in-out;
+}
+
 .game {
   max-width: 600px;
   padding: 20px;
   width: 90%;
+  animation: fadeIn 0.75s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.75s ease-in-out;
+}
+
+#background-image {
+  background-image: url("img/Background1.jpg");
 }
 
 .game-text {
@@ -28,30 +52,37 @@ audio {
 #story-text {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  font-weight: bolder;
+  text-align: center;
+  /* animation: fadeIn 1s ease-in-out; */
 }
 
 .game-options {
   display: flex;
-  /* flex-direction: column; */
   gap: 12px;
   text-align: center;
 }
 
 .game-btn {
   padding: 12px;
+  font-family: "Outfit", sans-serif;
   font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #007bff;
+  font-weight: bold;
+  border: 2px dotted white;
+  border-radius: 16px;
+  background-color: rgba(50, 116, 192, 0.5);
   color: white;
   cursor: pointer;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .game-btn:hover {
-  background-color: #435454;
+  background-color: rgba(96, 124, 156, 0.5);
+  transition: background-color 0.5s ease-in-out;
+  color: rgb(219, 219, 80);
 }
 
 @media (max-width: 520px) {

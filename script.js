@@ -1,6 +1,8 @@
 const storyText = document.getElementById("story-text");
 const gameOptions = document.getElementById("game-options");
 const backgroundMusic = document.getElementById("background-music");
+const backgroundImage = document.getElementById("background-image");
+const game = document.getElementById("game");
 
 const storyPaths = {
   music: "music/Deduction.mp3",
@@ -55,7 +57,7 @@ const storyPaths = {
   quitting: {
     text: "You tell your boss about wanting to quit your job, but they try to convince you not to because a lot of employees have already said they're not coming in on Friday. What do you do?",
     music: "music/I'll Face Myself.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "Not quit + work on Friday. They probably need me.",
@@ -71,7 +73,7 @@ const storyPaths = {
   yesQuit: {
     text: "You have successfully quit your retail job and are now living that sweet unemployed life. That is, until you have to look for a new job. The holiday rush is coming so it'll probably be very easy for you to find a job.",
     music: "music/specialist (Reincarnation).mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background5.jpg",
     options: [
       {
         text: "Back to start!",
@@ -83,7 +85,7 @@ const storyPaths = {
   yesOpening: {
     text: "Well, you're actually opening Walmart. On Black Friday. Good luck!!!",
     music: "music/I'll Face Myself.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background6.jpg",
     options: [
       {
         text: "Thanks!",
@@ -95,7 +97,7 @@ const storyPaths = {
   thanksgivingDay: {
     text: "It's Thanksgiving Day, which means that you'll have to be at Walmart in a few hours. What do you do?",
     music: "music/Alone.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background7.jpg",
     options: [
       {
         text: "Go to sleep early! I have to wake up early!",
@@ -111,7 +113,7 @@ const storyPaths = {
   sleepEarly: {
     text: "Your alarm goes off at 4 am. Thankfully, you feel great because you went to bed early! You get ready since you have to be at work by 5 am.",
     music: "music/Alone.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background8.jpg",
     options: [
       {
         text: "I'm ready to go!",
@@ -123,7 +125,7 @@ const storyPaths = {
   sleepLate: {
     text: "Your alarm goes off at 4 am. You got less than 2 hours of sleep! What do you do?",
     music: "music/Who's There.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background1.jpg",
     options: [
       {
         text: "Power through. Drink a lot of coffee. I need to get to work!",
@@ -139,7 +141,7 @@ const storyPaths = {
   sleepIn: {
     text: "You sleep in. You really don't care about what's going on at your job. If you get fired it's whatever.",
     music: "music/Reverie.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background2.jpg",
     options: [
       {
         text: "Back to start!",
@@ -151,7 +153,7 @@ const storyPaths = {
   goToWalmart: {
     text: "You make it to Walmart, and there's already a crowd of people waiting outside! Some people are yelling at you to open the store, even though it's supposed to open at 6. Do you do it?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background3.jpg",
     options: [
       {
         text: "No! It's not time to open yet!",
@@ -168,7 +170,7 @@ const storyPaths = {
   noOpen: {
     text: "You ignore customers' pleas. It's not even 5:30 yet. They can wait until opening.",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "Enter the store.",
@@ -180,7 +182,7 @@ const storyPaths = {
   yesOpen: {
     text: "Right when you're about to open, a coworker sees what you're doing and tells you to stop.",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background5.jpg",
     options: [
       {
         text: "OK, time to enter the store and get ready.",
@@ -192,7 +194,7 @@ const storyPaths = {
   insideStore: {
     text: "You and your coworkers spend time organizing the store before opening (as if it's not going to be unrecognizable in a few hours). Finally, it's time to open! Brace yourself for what's to come.",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background6.jpg",
     options: [
       {
         text: "Oh no.",
@@ -208,7 +210,7 @@ const storyPaths = {
   openingTime: {
     text: "People come rushing in right away. However, since the crowd is too large, not everyone can enter the store at the same time. A lady who was unable to enter the store tells you that the lines are too long. She wants to know if you can make them shorter.",
     music: "music/I'll Face Myself.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background7.jpg",
     options: [
       {
         text: `"No, I can't make lines shorter. The lines are there for a reason!"`,
@@ -224,7 +226,7 @@ const storyPaths = {
   lineLady1: {
     text: "Well, responding to her was a mistake! She now wants to go to the front of the line. When you tell her no, she asks to speak to the manager.",
     music: "music/I'll Face Myself -Battle-.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background8.jpg",
     options: [
       {
         text: "Lie and say that you're the manager.",
@@ -241,7 +243,7 @@ const storyPaths = {
   managerLie: {
     text: "You're able to convince her that you're the manager, and that she should wait her turn.",
     music: "music/specialist (Reincarnation).mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background1.jpg",
     options: [
       {
         text: "Problem solved!",
@@ -253,7 +255,7 @@ const storyPaths = {
   managerTruth: {
     text: "The lady gets mad when you tell her this and throws a tantrum. She sits on the floor and it doesn't look like she'll get up anytime soon. You really don't want to deal with this right now.",
     music: "music/Alone.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background2.jpg",
     options: [
       {
         text: "Call security and leave it up to them.",
@@ -273,7 +275,7 @@ const storyPaths = {
   ladySecurity: {
     text: "You call security and leave the rest up to them. Finally, you can get back to work.",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background3.jpg",
     options: [
       {
         text: "Get to work!",
@@ -285,7 +287,7 @@ const storyPaths = {
   ladyGoHome: {
     text: "Since the store had JUST opened and you were already dealing with insufferable people, you figured that the rest of today would be torture. You decide to go home. Unfortunately, you did not survive Walmart Black Friday.",
     music: "music/Alone.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "Back to start :(",
@@ -297,7 +299,7 @@ const storyPaths = {
   section: {
     text: "Now that that's done, what do you want to deal with? I mean, where do you want to work?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background5.jpg",
     options: [
       {
         text: "Electronics section!",
@@ -313,7 +315,7 @@ const storyPaths = {
   electronics: {
     text: "Ah yes, the electronics section. Home to Xbox bundles and $200 4K TVs. Now what?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background6.jpg",
     options: [
       {
         text: "Help out with the TVs!",
@@ -329,7 +331,7 @@ const storyPaths = {
   tvs: {
     text: "Over at the TV section, you see two people fighting over a TV. Do you intervene?",
     music: "music/I'll Face Myself.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background7.jpg",
     options: [
       {
         text: "Try to stop them from fighting. There is no fighting in this store!",
@@ -349,7 +351,7 @@ const storyPaths = {
   fightLoss: {
     text: "You try to break up the fight, but uh oh! One of the guys fighting punches you in the face and breaks your nose!",
     music: "music/Who's There.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background8.jpg",
     options: [
       {
         text: "Ow, my nose :(",
@@ -401,7 +403,7 @@ const storyPaths = {
   throwXbox: {
     text: "The Xbox section is chaos. Everyone is trying to grab 1 of the 10 Xboxes. You could have done something else...",
     music: "music/specialist (Reincarnation).mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "Ok, that's not my problem.",
@@ -417,7 +419,7 @@ const storyPaths = {
   firstCome: {
     text: "You give out all the Xbox bundles, but there are still people waiting in line. Which announcement do you make?",
     music: "music/Deduction.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background5.jpg",
     options: [
       {
         text: "The Xbox bundles are no longer available!",
@@ -437,7 +439,7 @@ const storyPaths = {
   noLongerAvailable: {
     text: "Customers actually listened to you! They're leaving! Now what do you do?",
     music: "music/Electronica In Velvet Room.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background6.jpg",
     options: [
       {
         text: "Stay in the electronics section.",
@@ -453,7 +455,7 @@ const storyPaths = {
   xboxGone: {
     text: "For some reason customers think you're lying. They demand to go to the backrooms and see for themselves. You try to explain that you can't let them do that, but they start throwing insults at you. What's next?",
     music: "music/Who's There.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background7.jpg",
     options: [
       {
         text: "Start crying :(",
@@ -469,7 +471,7 @@ const storyPaths = {
   moreXboxes: {
     text: `The "additional Xbox shipment" was a lie. "I'll be back" was also a lie. You left and didn't look back. The customers are waiting for their Xboxes! Management finds out about this and you get fired on the spot. You (technically) survived Black Friday, but at what cost?`,
     music: "music/Who's There.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background8.jpg",
     options: [
       {
         text: "Darn :(",
@@ -481,7 +483,7 @@ const storyPaths = {
   notMyProblem: {
     text: "It seems like the store is getting busier and busier. There are too many customers and you can't keep up with them all. How are you feeling?",
     music: "music/Alone.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background1.jpg",
     options: [
       {
         text: "Better than ever! I can take them!",
@@ -529,7 +531,7 @@ const storyPaths = {
   cry: {
     text: "Customers can be so mean! You can't take it anymore and walk out of the store crying. You did not survive Walmart Black Friday.",
     music: "music/Alone.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "Back to start :(",
@@ -541,7 +543,7 @@ const storyPaths = {
   stayHere: {
     text: "Things are starting to slow down and the store isn't as chaotic anymore. You spend the next few hours helping customers, and before you know it, your shift is over! Congratulations! You survived Walmart Black Friday!",
     music: "music/Period.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background5.jpg",
     options: [
       {
         text: "Yay!",
@@ -553,7 +555,7 @@ const storyPaths = {
   helpCoworkers: {
     text: "You go help your coworkers. They look like they really need it. Together, you get a lot of work done, and before you know it, it's time to leave! Congratulations! You've survived Walmart Black Friday!",
     music: "music/Period.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background6.jpg",
     options: [
       {
         text: "Yay!",
@@ -565,7 +567,7 @@ const storyPaths = {
   homeGoods: {
     text: "You made your way over to the home goods section. What do you feel like doing?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background7.jpg",
     options: [
       {
         text: "Organizing shelves!",
@@ -581,7 +583,7 @@ const storyPaths = {
   organizing: {
     text: "Organizing shelves seems like the easiest thing to do as a first-time Black Friday employee. You're stuck organizing shelves for 8 hours, but at least customers don't bother you! 8 hours later, your shift is done and you can go home! Congratulations! You survived Walmart Black Friday!",
     music: "music/Period.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background8.jpg",
     options: [
       {
         text: "Yay!",
@@ -593,7 +595,7 @@ const storyPaths = {
   helpCustomers: {
     text: "You've decided to help customers. Who approaches you first?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background1.jpg",
     options: [
       {
         text: "Older lady holding a basket.",
@@ -613,7 +615,7 @@ const storyPaths = {
   olderLady: {
     text: `The older lady with the basket approaches you and then brings you over to a display. All she has to say about this is "I don't understand this." She doesn't want to elaborate. What do you tell her?`,
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background2.jpg",
     options: [
       {
         text: `"Can you please give me more information? I might be able to help you then."`,
@@ -629,7 +631,7 @@ const storyPaths = {
   throwBasket: {
     text: "She doesn't like this explanation, apparently. She throws her basket at you. How do you react?",
     music: "music/I'll Face Myself.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background3.jpg",
     options: [
       {
         text: "Fight her!",
@@ -645,7 +647,7 @@ const storyPaths = {
   ladyFight: {
     text: "You decide to fight her. Why did you? Security has to break you two apart, and you also get arrested. You did not survive Walmart Black Friday.",
     music: "music/Who's There.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "Back to start :/",
@@ -657,7 +659,7 @@ const storyPaths = {
   ladyWalkAway: {
     text: "You walk away while laughing to yourself. This was the right choice, because the lady stormed out of the store! What do you feel like doing now?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background5.jpg",
     options: [
       {
         text: "Helping coworkers.",
@@ -673,7 +675,7 @@ const storyPaths = {
   acceptExplanation: {
     text: "The lady accepts your explanation and leaves you alone! What do you feel like doing now?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background6.jpg",
     options: [
       {
         text: "Helping coworkers.",
@@ -689,7 +691,7 @@ const storyPaths = {
   returns: {
     text: "Someone walks up to you holding a knife set. They said they're here to make a return (on Black Friday???). Now what?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background7.jpg",
     options: [
       {
         text: "Tell them to go home.",
@@ -705,7 +707,7 @@ const storyPaths = {
   returnsGoHome: {
     text: "You tell them to go home and then walk away. You try to be productive the rest of your shift.",
     music: "music/Alone.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background8.jpg",
     options: [
       {
         text: "I've been working for HOURS!",
@@ -717,7 +719,7 @@ const storyPaths = {
   returnsExchanges: {
     text: "You point them in the direction of Returns & Exchanges. They thank you and quickly walk away. What do you do now?",
     music: "music/specialist (Reincarnation).mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background1.jpg",
     options: [
       {
         text: "Organize shelves.",
@@ -733,7 +735,7 @@ const storyPaths = {
   bestBuy: {
     text: "The lady that comes up with you shows you her phone and asks you if Walmart can price match a microwave with Best Buy. You can't price match. What do you tell her?",
     music: "music/Theme of Junes.mp3",
-    background_image: "img/Background3.jpg",
+    background_image: "img/Background2.jpg",
     options: [
       {
         text: `"Sorry, but we can't do that."`,
@@ -749,7 +751,7 @@ const storyPaths = {
   priceMatchNo: {
     text: "The lady gets upset and calls 911 on you. The police arrive, and since there's no true emergency, they arrest her for misusing the emergency service. With that done, you're free to do your job. Congratulations! You've survived Walmart Black Friday!",
     music: "music/Period.mp3",
-    background_image: "img/Background1.jpg",
+    background_image: "img/Background3.jpg",
     options: [
       {
         text: "Yay!",
@@ -761,7 +763,7 @@ const storyPaths = {
   priceMatchYes: {
     text: "Yes, you lied to the customer. But she won't realize you did until she's paying for the microwave.",
     music: "music/Electronica In Velvet Room.mp3",
-    background_image: "img/Background2.jpg",
+    background_image: "img/Background4.jpg",
     options: [
       {
         text: "I'm such a great liar!",
@@ -783,6 +785,12 @@ function renderStory(path) {
     });
   }
 
+  // update background image
+  if (currentPath.background_image) {
+    backgroundImage.style.backgroundImage = `url(${currentPath.background_image})`;
+  }
+
+  // update text and options
   gameOptions.innerHTML = ""; // Clear previous options
   currentPath.options.forEach((option) => {
     const button = document.createElement("button");
